@@ -1,0 +1,33 @@
+# Dependencies and generated output
+node_modules/
+dist/
+build/
+coverage/
+.vite/
+.turbo/
+.cache/
+playwright-report/
+test-results/
+*.tsbuildinfo
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+
+# Database exports and operational artifacts
+backups/
+*.dump
+*.backup
+*.sql.gz
+
+# Local logs and OS/editor files
+*.log
+*.pid
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
