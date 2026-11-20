@@ -7,9 +7,12 @@ Dokumentasi ditulis dalam Bahasa Indonesia. Identifier kode, nama endpoint, dan 
 | Dokumen | Fungsi | Status |
 | --- | --- | --- |
 | [Product brief](product/brief.md) | Sasaran, cakupan, dan batas pilot yang disepakati | Baseline |
+| [PRD](product/prd.md) | Kebutuhan pilot dan kriteria penerimaan | Draft untuk review |
+| [Matriks akses](product/access-matrix.md) | Usulan izin per peran/outlet | Menunggu review |
+| [Matriks validasi](product/acceptance-matrix.md) | Pemetaan requirement ke skenario pengujian | Rancangan; belum dijalankan |
 | [Roadmap](roadmap.md) | Milestone dan checkpoint | Baseline |
 | [Daftar keputusan](decisions.md) | Keputusan terkunci, default, dan hal terbuka | Tersedia |
-| [Backlog](backlog.md) | Tugas berikutnya dengan kriteria selesai | PRD disiapkan |
+| [Backlog](backlog.md) | Tugas berikutnya dengan kriteria selesai | Aturan bisnis disiapkan |
 | [Progres](progress.md) | Hasil, batasan, dan langkah berikutnya | Tersedia |
 | [Panduan pengembangan](../AGENTS.md) | Aturan implementasi dan validasi | Tersedia |
 | [Panduan kontribusi](../CONTRIBUTING.md) | Branch, commit, review, dan handoff | Tersedia |
@@ -23,13 +26,12 @@ Daftar ini adalah rencana, bukan tautan ke file yang sudah tersedia. Hindari mem
 
 | Target | Dokumen / lokasi terencana | Isi minimum |
 | --- | --- | --- |
-| Kebutuhan | PRD: `product/prd.md` | Persona/peran, requirement ID, prioritas, acceptance criteria, batas fitur |
 | Aturan bisnis | `product/business-rules.md` | Transisi status, harga, pembulatan, dapur, konsumsi bahan, pembatalan, retur, shift |
 | Arsitektur | `architecture/overview.md` | Diagram konteks/container, modul, batas transaksi, tenant, sesi, deployment |
 | Model data | `architecture/data-model.md` | ERD, kamus data awal, FK, unique constraint, nilai uang, kuantitas, waktu, snapshot |
 | Keputusan teknis | ADR: `architecture/adr/` | Konteks, keputusan, konsekuensi, status, dan alternatif |
 | UX | `design/ux-spec.md` | Alur, wireframe, keyboard, responsivitas, empty/loading/error/offline states |
-| Arah visual | `design/brief.md` | Arah pengguna, persetujuan, dan alasan keputusan utama |
+| Arah visual | `../DESIGN.md` pada root repository | Arah pengguna, persetujuan, dan alasan keputusan utama |
 | Sebelum fitur terkait | API: `api/README.md` dan OpenAPI saat backend tersedia | Endpoint, payload, izin, error, idempotency, konflik, pagination |
 | Scaffold dan fitur | Strategi pengujian: `engineering/testing.md` | Pemetaan requirement ke pengujian dan cara menjalankannya |
 | Staging | Runbook: `operations/runbook.md` | Environment, migrasi, deployment, monitoring, insiden |

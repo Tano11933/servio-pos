@@ -18,6 +18,8 @@ Status dibedakan antara keputusan pengguna yang sudah disepakati, default kerja 
 | D-010 | Nama Servio POS, repository public `Tano11933/servio-pos` | Remote: `https://github.com/Tano11933/servio-pos.git` |
 | D-011 | Penamaan berdasarkan fitur dan milestone | Tidak memakai label hari pada dokumen, branch, atau commit; identitas commit memakai pemilik repository tanpa atribusi tambahan |
 
+Catatan kerja: gunakan penamaan yang mengalir berdasarkan fitur/milestone pada dokumen, branch, dan commit. Metadata commit tetap memakai identitas pemilik tanpa atribusi tambahan. Aturan ini berlaku untuk sesi lanjutan.
+
 ## Default kerja
 
 | ID | Default | Alasan |
@@ -32,7 +34,7 @@ Status dibedakan antara keputusan pengguna yang sudah disepakati, default kerja 
 
 | ID | Keputusan | Batas waktu | Cara menyelesaikan |
 | --- | --- | --- | --- |
-| O-001 | Izin per peran dan outlet | Implementasi akses | Matriks owner/manager/kasir/dapur di PRD |
+| O-001 | Izin per peran dan outlet | Implementasi akses | [Matriks usulan](product/access-matrix.md) tersedia; menunggu review pemilik |
 | O-002 | Mata uang, pembulatan, diskon, pajak, service charge | Model uang dan pembayaran | Representasi eksak, contoh hitungan, dan konfigurasi terverifikasi |
 | O-003 | Reservasi, konsumsi, pelepasan bahan | Model pesanan/inventori | Transisi termasuk persiapan dan pembatalan |
 | O-004 | Status pesanan, pembayaran, dan dapur | ERD/API terkait | State transition serta aturan perubahan bersamaan |

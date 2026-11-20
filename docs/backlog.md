@@ -1,36 +1,41 @@
 # Backlog aktif
 
-Milestone aktif: fondasi produk dan pengembangan. Roadmap menyimpan urutan besar; backlog merinci tugas yang siap dikerjakan. Issue merujuk tugas ini tanpa menduplikasi status yang saling bertentangan.
+Milestone aktif: fondasi produk dan pengembangan. Pekerjaan mengikuti fitur dan dependensi; tanpa label hari pada dokumen, branch, atau commit.
 
-## Berikutnya: product requirements
+## Dokumen kebutuhan tersedia
 
-Branch terencana: `docs/product-requirements`.
+Branch: `docs/product-requirements`. Status penyusunan: selesai; status persetujuan: menunggu review pemilik. Belum ada implementasi fitur.
 
-Prasyarat: baca product brief, roadmap, daftar keputusan, dan progres terbaru. Tidak memerlukan scaffold aplikasi.
+| ID | Hasil | Status |
+| --- | --- | --- |
+| PRD-01 | PRD dengan ID, aktor, prioritas, dan acceptance criteria | Draft tersedia |
+| PRD-02 | Matriks peran serta batas tenant/outlet | Usulan menunggu review |
+| PRD-03 | Skenario takeaway, dine-in, dapur, pembayaran, shift, koreksi, dan gangguan | Tertulis di PRD |
+| PRD-04 | Pemetaan semua requirement ke skenario validasi | Rancangan tersedia; belum dijalankan |
+| PRD-05 | Batas pilot dan keputusan terbuka | Tercatat; tidak memperluas scope |
+
+## Berikutnya: aturan bisnis
+
+Branch terencana: `docs/business-rules`. Mulai dari hasil branch kebutuhan yang sudah direview/diintegrasikan; bila belum, catat dependensi branch.
 
 | ID | Tugas | Kriteria selesai |
 | --- | --- | --- |
-| PRD-01 | Susun PRD dengan ID kebutuhan stabil | Fitur pilot memiliki aktor, perilaku, prioritas, dan acceptance criteria |
-| PRD-02 | Susun matriks akses | Operasi owner/manager/kasir/dapur serta batas tenant/outlet tertulis; usulan dibedakan dari keputusan |
-| PRD-03 | Susun skenario takeaway dan dine-in | Mencakup pesanan, tambahan, dapur, pembayaran, shift, pembatalan, retur, dan gangguan |
-| PRD-04 | Hubungkan kebutuhan dengan pengujian | Kebutuhan kritis punya skenario positif, penolakan akses, serta duplikasi/konkurensi yang relevan |
-| PRD-05 | Review batas pilot | Tanpa split bill/offline penuh/payment gateway; aturan belum final ditandai |
-
-Commit dapat dipisahkan berdasarkan kebutuhan/cakupan, izin/alur penerimaan, dan penelusuran pengujian. Jumlah mengikuti perubahan nyata.
+| BIZ-01 | State machine pesanan, pembayaran, dapur, dan meja | Transisi, prasyarat, peran, serta penolakan tertulis; pesanan dan persiapan tidak dicampur dengan status pembayaran |
+| BIZ-02 | Reservasi/konsumsi bahan dan pembatalan | Waktu penguncian resep, stok terbatas, pelepasan reservasi, dan waste jelas |
+| BIZ-03 | Uang, diskon, pajak, service charge, pembulatan | Urutan hitung dan contoh expected result eksak; konfigurasi outlet dikonfirmasi |
+| BIZ-04 | Shift, retur, dan refund manual | Batas kumulatif, atribusi kas, refund setelah shift asal ditutup, serta operasi bersamaan jelas |
+| BIZ-05 | Review matriks izin dan ketergantungan | Keputusan pemilik dibedakan dari usulan; PRD/keputusan/validasi diperbarui bila berubah |
 
 ## Antrean berikutnya
 
-1. Kunci state machine dan dampak stok/kas sebelum ERD/API final.
-2. Buat arsitektur, ERD, dan ADR; susun kontrak sebelum fitur terkait.
-3. Susun wireframe dan design brief; palet/tipografi belum disetujui.
-4. Pilih runtime/dependency, scaffold aplikasi/database, siapkan CI, dan kaji printer.
+1. Arsitektur, ERD, ADR, dan kontrak API sebelum fitur terkait.
+2. Arah visual pada `DESIGN.md` di root dan UX/wireframe pada `docs/design/ux-spec.md`; belum dibuat atau disetujui.
+3. Runtime/dependency, scaffold aplikasi/database, CI, serta kajian kandidat printer.
 
-Command Node/npm ditemukan tetapi belum ada versi Node aktif. Pilih runtime yang didukung dependency dan verifikasi versi sebelum scaffold.
+Command Node/npm sebelumnya ditemukan tanpa versi Node aktif. Verifikasi kembali dan pilih runtime yang didukung sebelum scaffold.
 
 ## Kebutuhan eksternal
 
 - Remote: `https://github.com/Tano11933/servio-pos.git`.
-- Printer fisik dibutuhkan sebelum uji cetak; hosting dan akses outlet dibutuhkan untuk staging/pilot.
+- Printer fisik, hosting, dan akses outlet untuk validasi operasional.
 - Lisensi distribusi belum ditentukan.
-
-Kebutuhan tersebut tidak menghalangi PRD. Jangan menyatakan pengujian perangkat atau layanan berhasil sebelum dilaksanakan.
