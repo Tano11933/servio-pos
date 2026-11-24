@@ -6,7 +6,7 @@ Status tugas: `berikutnya`, `belum dimulai`, `berjalan`, `selesai`, atau `terham
 
 ## Fondasi produk dan pengembangan
 
-Status: berjalan. Fondasi repository dan draft PRD/matriks akses/rancangan validasi tersedia. Dokumen kebutuhan menunggu review; aturan bisnis, desain, dan scaffold menyusul.
+Status: berjalan. Dokumen kebutuhan sudah diintegrasikan; usulan aturan bisnis beserta contoh penerimaan tersedia untuk review. Izin dan pilihan operasional belum dikunci. Arsitektur, desain, dan scaffold menyusul.
 
 - Git, README, workflow branch, panduan pengembangan, dan catatan progres.
 - PRD, matriks hak akses, dan kriteria penerimaan pilot.

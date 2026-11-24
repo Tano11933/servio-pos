@@ -32,6 +32,8 @@ Status: rancangan pengujian untuk [PRD](prd.md), bukan hasil pengujian. Semua sk
 
 ## Ketentuan bukti
 
+[Contoh penerimaan aturan](business-examples.md) memperinci expected result untuk VAL-02/03/07/09/10/11/12/13/14/15/16/17/18/19 berdasarkan usulan BR-01 sampai BR-10. Pilihan bisnis yang belum disetujui tidak diperlakukan sebagai aturan final.
+
 - Unit test tidak cukup untuk membuktikan locking, constraint, rollback, atau isolasi PostgreSQL. Gunakan database nyata yang terisolasi untuk pengujian tersebut.
 - Setiap pelaksanaan mencatat versi/commit, lingkungan, data uji aman, hasil aktual, serta temuan. Jangan memasukkan secret atau data pelanggan ke repository.
 - Nilai uang/pajak dan transisi stok yang belum disepakati tidak ditebak dalam expected result; kunci aturan lebih dahulu.
