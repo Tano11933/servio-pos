@@ -61,7 +61,9 @@ Kebutuhan berikut berprioritas wajib untuk pilot. Implementasi mengikuti depende
 
 [Matriks akses](access-matrix.md) adalah usulan review. Waktu konsumsi bahan, status/transisi, aturan shift, pembulatan, konfigurasi pajak, dan kebijakan retur tetap mengikuti keputusan terbuka pada [daftar keputusan](../decisions.md). Tabel di atas menetapkan kemampuan dan invariannya, bukan memilih detail tersebut diam-diam.
 
-Nama/warna/tipografi belum ditentukan. Arah visual direncanakan di `DESIGN.md` pada root; spesifikasi interaksi dan wireframe di `docs/design/ux-spec.md`. Dokumen visual belum tersedia.
+Usulan perilaku rinci ada pada [aturan operasional](business-rules.md) dan [aturan uang/shift/retur](settlement-rules.md), dengan [contoh penerimaan](business-examples.md). Dokumen tersebut belum mengunci keputusan pemilik; termasuk batas pembatalan baris, hak diskon, dan refund saat persiapan yang perlu direview sebelum implementasi.
+
+Nama produk adalah Servio POS; warna/tipografi belum ditentukan. Arah visual direncanakan di `DESIGN.md` pada root; spesifikasi interaksi dan wireframe di `docs/design/ux-spec.md`. Dokumen visual belum tersedia.
 
 ## Syarat penerimaan pilot
 

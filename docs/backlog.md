@@ -1,41 +1,34 @@
 # Backlog aktif
 
-Milestone aktif: fondasi produk dan pengembangan. Pekerjaan mengikuti fitur dan dependensi; tanpa label hari pada dokumen, branch, atau commit.
+Milestone: fondasi produk dan pengembangan. Gunakan fitur/milestone tanpa label hari pada dokumen, branch, atau commit; identitas Git pemilik tanpa atribusi tambahan.
 
-## Dokumen kebutuhan tersedia
+## Hasil terkini
 
-Asal branch: `docs/product-requirements`, diintegrasikan ke `main` dengan persetujuan pemilik. Penyusunan dokumen selesai; detail izin dan aturan yang ditandai usulan tetap menunggu keputusan. Belum ada implementasi fitur.
+PRD-01 sampai PRD-05 tersusun dan sudah diintegrasikan ke main. Dokumen dari `docs/business-rules` juga diintegrasikan ke main dengan persetujuan pemilik. Pilihan di bawah tetap berstatus usulan sampai dikunci; belum diimplementasikan:
 
-| ID | Hasil | Status |
+| Tugas | Hasil | Status |
 | --- | --- | --- |
-| PRD-01 | PRD dengan ID, aktor, prioritas, dan acceptance criteria | Draft tersedia |
-| PRD-02 | Matriks peran serta batas tenant/outlet | Usulan menunggu review |
-| PRD-03 | Skenario takeaway, dine-in, dapur, pembayaran, shift, koreksi, dan gangguan | Tertulis di PRD |
-| PRD-04 | Pemetaan semua requirement ke skenario validasi | Rancangan tersedia; belum dijalankan |
-| PRD-05 | Batas pilot dan keputusan terbuka | Tercatat; tidak memperluas scope |
+| BIZ-01 | Status pesanan, pembayaran, dapur, meja, prasyarat dan konflik | Usulan BR-01/02/03/05 |
+| BIZ-02 | Snapshot, reservasi, konsumsi, pembatalan dan waste | Usulan BR-04/06 |
+| BIZ-03 | Uang eksak, pembulatan, diskon, service, tax dan alokasi refund | Usulan BR-07; tarif outlet terbuka |
+| BIZ-04 | Shift, retur, batas kumulatif dan refund lintas shift | Usulan BR-08/09/10 |
+| BIZ-05 | Keterlacakan keputusan, PRD, izin dan validasi | Dokumen diselaraskan; keputusan pemilik menunggu review |
 
-## Berikutnya: aturan bisnis
+## Berikutnya: review keputusan dan arsitektur
 
-Branch terencana: `docs/business-rules`. Mulai dari `main` terbaru yang sudah memuat dokumen kebutuhan.
+1. Review O-001 sampai O-005: izin, mata uang/basis pajak, kapan konsumsi, kapan lepas meja, refund saat persiapan, atribusi shift dan masa retur.
+2. Catat persetujuan/perubahan eksplisit, perbarui aturan serta contoh yang terdampak. Jangan menandai usulan sebagai keputusan final tanpa review.
+3. Mulai `docs/system-architecture` dari main terbaru yang sudah memuat dokumen aturan; keputusan yang belum dikunci tetap ditandai sebagai dependensi.
 
-| ID | Tugas | Kriteria selesai |
+| ID | Pekerjaan | Kriteria selesai |
 | --- | --- | --- |
-| BIZ-01 | State machine pesanan, pembayaran, dapur, dan meja | Transisi, prasyarat, peran, serta penolakan tertulis; pesanan dan persiapan tidak dicampur dengan status pembayaran |
-| BIZ-02 | Reservasi/konsumsi bahan dan pembatalan | Waktu penguncian resep, stok terbatas, pelepasan reservasi, dan waste jelas |
-| BIZ-03 | Uang, diskon, pajak, service charge, pembulatan | Urutan hitung dan contoh expected result eksak; konfigurasi outlet dikonfirmasi |
-| BIZ-04 | Shift, retur, dan refund manual | Batas kumulatif, atribusi kas, refund setelah shift asal ditutup, serta operasi bersamaan jelas |
-| BIZ-05 | Review matriks izin dan ketergantungan | Keputusan pemilik dibedakan dari usulan; PRD/keputusan/validasi diperbarui bila berubah |
+| ARCH-01 | Diagram konteks/container dan batas modul | Alur frontend–API–database, otorisasi, dapur, cetak dan operasi tergambar |
+| ARCH-02 | ERD dan kamus data | Tenant/outlet, snapshot, versi, ledger, uang/kuantitas, constraint dan audit konsisten dengan aturan yang dikunci |
+| ARCH-03 | ADR transaksi, idempotency dan konkurensi | Batas atomik, serialisasi saldo/pesanan/shift, replay dan pemulihan ditetapkan |
+| ARCH-04 | Kontrak awal API dan strategi validasi | Operasi prioritas punya izin, input/output, konflik dan skenario database nyata |
 
-## Antrean berikutnya
-
-1. Arsitektur, ERD, ADR, dan kontrak API sebelum fitur terkait.
-2. Arah visual pada `DESIGN.md` di root dan UX/wireframe pada `docs/design/ux-spec.md`; belum dibuat atau disetujui.
-3. Runtime/dependency, scaffold aplikasi/database, CI, serta kajian kandidat printer.
-
-Command Node/npm sebelumnya ditemukan tanpa versi Node aktif. Verifikasi kembali dan pilih runtime yang didukung sebelum scaffold.
+Sesudahnya: `DESIGN.md` di root, UX/wireframe, runtime/dependency, scaffold, CI, dan kajian printer sesuai roadmap. Belum ada arah visual disetujui. Node sebelumnya belum memiliki versi aktif; verifikasi sebelum scaffold.
 
 ## Kebutuhan eksternal
 
-- Remote: `https://github.com/Tano11933/servio-pos.git`.
-- Printer fisik, hosting, dan akses outlet untuk validasi operasional.
-- Lisensi distribusi belum ditentukan.
+Remote: `https://github.com/Tano11933/servio-pos.git`. Printer fisik, hosting, akses outlet, serta lisensi distribusi masih perlu disiapkan pada tahap terkait.

@@ -5,38 +5,34 @@
 | Item | Status |
 | --- | --- |
 | Produk | Servio POS |
-| Milestone aktif | Fondasi produk dan pengembangan |
-| Hasil terbaru | Draft PRD, usulan matriks akses, dan rancangan validasi |
-| Review | Pemilik menyetujui integrasi dokumen kebutuhan; detail izin dan aturan bisnis tetap terbuka |
-| Branch | `main`; dokumen kebutuhan diintegrasikan dari `docs/product-requirements` |
-| Berikutnya | Aturan bisnis dan transisi status |
+| Milestone | Fondasi produk dan pengembangan |
+| Hasil terbaru | Usulan aturan operasional, uang/shift/retur, dan contoh penerimaan |
+| Review | Integrasi dokumen disetujui pemilik; pilihan yang ditandai usulan tetap perlu dikunci |
+| Branch | `main`; aturan bisnis diintegrasikan dari `docs/business-rules` |
+| Berikutnya | Review keputusan bisnis lalu arsitektur/model data |
 | Repository | [Tano11933/servio-pos](https://github.com/Tano11933/servio-pos) |
 
 ## Catatan kerja tetap
 
-Gunakan milestone dan nama fitur, tanpa label hari pada dokumen, branch, atau commit. Commit memakai identitas pemilik repository tanpa atribusi tambahan. Jumlah commit mengikuti perubahan bermakna.
+Penamaan mengalir berdasarkan fitur dan milestone, tanpa label hari pada dokumen, branch, atau commit. Metadata commit memakai identitas Git pemilik repository tanpa atribusi tambahan; jangan membuat commit kosong untuk memenuhi jumlah.
 
 ## Hasil
 
-- Fondasi Git, README, roadmap, panduan pengembangan, serta template issue/PR tersedia.
-- [PRD](product/prd.md) menetapkan kebutuhan wajib, kriteria penerimaan, alur operasional, dan batas pilot.
-- [Matriks akses](product/access-matrix.md) memisahkan usulan hak owner/manager/kasir/dapur serta batas tenant/outlet.
-- [Matriks validasi](product/acceptance-matrix.md) memetakan setiap requirement ke skenario serta bukti yang perlu dikumpulkan; seluruh skenario aplikasi belum dijalankan.
-- Daftar keputusan tetap menandai izin, hitungan uang, konsumsi bahan, status, dan retur sebagai keputusan terbuka.
-- Lokasi arah visual diselaraskan ke `DESIGN.md` pada root; dokumennya belum dibuat.
+- Dokumen kebutuhan sudah diintegrasikan pada main dengan persetujuan pemilik.
+- Dokumen aturan bisnis diintegrasikan ke main atas permintaan pemilik; integrasi tidak otomatis menutup keputusan yang masih ditandai usulan.
+- [Aturan operasional](product/business-rules.md): transisi pesanan/dapur/meja, snapshot, idempotency, konflik, reservasi, konsumsi dan waste.
+- [Aturan uang/shift/retur](product/settlement-rules.md): total eksak, alokasi refund, pelunasan, kas shift, koreksi historis dan laporan.
+- [Contoh penerimaan](product/business-examples.md): 22 expected result untuk hitungan, retry, konkurensi, refund dan penutupan.
+- PRD, matriks validasi, indeks, roadmap serta keputusan diselaraskan tanpa menganggap pilihan operasional sudah disetujui.
 
 ## Validasi dokumen
 
-Pemeriksaan mencakup whitespace, tujuan tautan lokal, ID requirement unik, cakupan requirement dalam matriks validasi, metadata template, label/atribusi yang tidak diinginkan, serta metadata commit. Validasi dokumen tidak menjadi bukti aplikasi sudah bekerja.
+Periksa whitespace dan tautan lokal, ID aturan/contoh serta referensinya, hitungan contoh, metadata commit dan penamaan. Pemeriksaan aritmetika contoh tidak membuktikan aplikasi, locking atau rollback sudah berjalan. Pengujian aplikasi dalam matriks validasi masih belum dijalankan.
 
-## Batasan
+## Batasan dan review
 
-- Belum ada source aplikasi, database, dependency, build/test aplikasi, atau deployment.
-- Node sebelumnya belum memiliki versi aktif; periksa sebelum scaffold.
-- Printer, restore database, dan penggunaan outlet belum diuji.
-- Palet, tipografi, dan lisensi belum ditentukan.
-- Integrasi dokumen kebutuhan disetujui pemilik. Persetujuan merge tidak menutup keputusan yang masih ditandai usulan atau terbuka.
+Belum ada source, database, dependency, build/test aplikasi, deployment, uji printer atau restore. Palet/tipografi, lisensi, runtime dan konfigurasi outlet belum dikunci. Review utama: IDR/pembulatan/basis pajak, konsumsi saat persiapan, kapan meja lepas, refund saat persiapan, izin diskon, atribusi kas shift, dan masa retur. Semuanya tetap usulan.
 
 ## Langkah berikutnya
 
-Kerjakan BIZ-01 sampai BIZ-05 pada backlog dari `main` terbaru, termasuk konfirmasi detail izin yang masih berupa usulan. Lanjutkan arsitektur/data model dan desain sesuai dependensi. Status push dan hash akhir diperiksa melalui Git.
+Review O-001 sampai O-005, catat keputusan, lalu kerjakan ARCH-01 sampai ARCH-04 pada backlog. Branch baru mengikuti dependensi yang sudah direview. Status push dan hash akhir diperiksa melalui Git, bukan disimpulkan dari URL repository.

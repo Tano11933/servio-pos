@@ -10,9 +10,12 @@ Dokumentasi ditulis dalam Bahasa Indonesia. Identifier kode, nama endpoint, dan 
 | [PRD](product/prd.md) | Kebutuhan pilot dan kriteria penerimaan | Draft untuk review |
 | [Matriks akses](product/access-matrix.md) | Usulan izin per peran/outlet | Menunggu review |
 | [Matriks validasi](product/acceptance-matrix.md) | Pemetaan requirement ke skenario pengujian | Rancangan; belum dijalankan |
+| [Aturan bisnis](product/business-rules.md) | Pesanan, dapur, meja, dan bahan | Usulan untuk review |
+| [Aturan uang/shift/retur](product/settlement-rules.md) | Perhitungan, pembayaran, kas, refund, laporan | Usulan untuk review |
+| [Contoh penerimaan](product/business-examples.md) | Expected result aturan | Rancangan; bukan pengujian aplikasi |
 | [Roadmap](roadmap.md) | Milestone dan checkpoint | Baseline |
 | [Daftar keputusan](decisions.md) | Keputusan terkunci, default, dan hal terbuka | Tersedia |
-| [Backlog](backlog.md) | Tugas berikutnya dengan kriteria selesai | Aturan bisnis disiapkan |
+| [Backlog](backlog.md) | Tugas berikutnya dengan kriteria selesai | Review aturan lalu arsitektur |
 | [Progres](progress.md) | Hasil, batasan, dan langkah berikutnya | Tersedia |
 | [Panduan pengembangan](../AGENTS.md) | Aturan implementasi dan validasi | Tersedia |
 | [Panduan kontribusi](../CONTRIBUTING.md) | Branch, commit, review, dan handoff | Tersedia |
@@ -26,7 +29,6 @@ Daftar ini adalah rencana, bukan tautan ke file yang sudah tersedia. Hindari mem
 
 | Target | Dokumen / lokasi terencana | Isi minimum |
 | --- | --- | --- |
-| Aturan bisnis | `product/business-rules.md` | Transisi status, harga, pembulatan, dapur, konsumsi bahan, pembatalan, retur, shift |
 | Arsitektur | `architecture/overview.md` | Diagram konteks/container, modul, batas transaksi, tenant, sesi, deployment |
 | Model data | `architecture/data-model.md` | ERD, kamus data awal, FK, unique constraint, nilai uang, kuantitas, waktu, snapshot |
 | Keputusan teknis | ADR: `architecture/adr/` | Konteks, keputusan, konsekuensi, status, dan alternatif |

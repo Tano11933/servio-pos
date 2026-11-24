@@ -32,6 +32,10 @@ Catatan kerja: gunakan penamaan yang mengalir berdasarkan fitur/milestone pada d
 
 ## Keputusan terbuka
 
+Usulan rinci tersedia pada [aturan bisnis](product/business-rules.md) (BR-01–06), [uang/shift/retur](product/settlement-rules.md) (BR-07–10), dan [contoh penerimaan](product/business-examples.md). O-002 sampai O-005 tetap terbuka sampai direview; dokumentasi bukan persetujuan otomatis.
+
+Poin utama: usulan IDR dan half-up satu rupiah; konsumsi bahan saat PREPARING; meja dilepas setelah pelunasan historis dan item final; refund item PREPARING ditunda; diskon hanya owner/manager; refund tercatat pada shift pelaku yang aktif. Tarif dan data outlet belum ditetapkan.
+
 | ID | Keputusan | Batas waktu | Cara menyelesaikan |
 | --- | --- | --- | --- |
 | O-001 | Izin per peran dan outlet | Implementasi akses | [Matriks usulan](product/access-matrix.md) tersedia; menunggu review pemilik |
