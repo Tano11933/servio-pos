@@ -6,33 +6,31 @@
 | --- | --- |
 | Produk | Servio POS |
 | Milestone | Fondasi produk dan pengembangan |
-| Hasil terbaru | Usulan aturan operasional, uang/shift/retur, dan contoh penerimaan |
-| Review | Integrasi dokumen disetujui pemilik; pilihan yang ditandai usulan tetap perlu dikunci |
-| Branch | `main`; aturan bisnis diintegrasikan dari `docs/business-rules` |
-| Berikutnya | Review keputusan bisnis lalu arsitektur/model data |
+| Hasil terbaru | Arsitektur, ERD/kamus data, dua ADR, REST awal, strategi pengujian dan review dokumen |
+| Integrasi | Pemilik mengotorisasi review dan merge ke main setelah validasi; hash/status remote diverifikasi lewat Git |
+| Asal branch | docs/system-architecture |
+| Berikutnya | Design brief bersama pemilik dan spesifikasi UX |
 | Repository | [Tano11933/servio-pos](https://github.com/Tano11933/servio-pos) |
 
 ## Catatan kerja tetap
 
-Penamaan mengalir berdasarkan fitur dan milestone, tanpa label hari pada dokumen, branch, atau commit. Metadata commit memakai identitas Git pemilik repository tanpa atribusi tambahan; jangan membuat commit kosong untuk memenuhi jumlah.
+Penamaan mengalir berdasarkan fitur/milestone, tanpa label hari pada dokumen, branch, atau commit. Metadata memakai identitas Git pemilik tanpa atribusi tambahan. Jangan membuat commit kosong untuk memenuhi jumlah.
 
 ## Hasil
 
-- Dokumen kebutuhan sudah diintegrasikan pada main dengan persetujuan pemilik.
-- Dokumen aturan bisnis diintegrasikan ke main atas permintaan pemilik; integrasi tidak otomatis menutup keputusan yang masih ditandai usulan.
-- [Aturan operasional](product/business-rules.md): transisi pesanan/dapur/meja, snapshot, idempotency, konflik, reservasi, konsumsi dan waste.
-- [Aturan uang/shift/retur](product/settlement-rules.md): total eksak, alokasi refund, pelunasan, kas shift, koreksi historis dan laporan.
-- [Contoh penerimaan](product/business-examples.md): 22 expected result untuk hitungan, retry, konkurensi, refund dan penutupan.
-- PRD, matriks validasi, indeks, roadmap serta keputusan diselaraskan tanpa menganggap pilihan operasional sudah disetujui.
+- PRD dan aturan bisnis sudah diintegrasikan pada main; pilihan yang ditandai usulan tetap terbuka.
+- [Overview](architecture/overview.md) menjelaskan container, ownership modul, sesi/CSRF, tenant dan alur kritis.
+- [ERD/kamus data](architecture/data-model.md) memetakan snapshot, unit refund, saldo/ledger, scope FK dan constraint.
+- ADR struktur serta transaksi menetapkan baseline sesi, polling, locking, replay dan pemulihan.
+- [REST awal](api/README.md) dan [strategi pengujian](engineering/testing.md) menyediakan antarmuka prioritas serta bukti yang diperlukan.
+- [Review](architecture/review.md) mencatat koreksi dan batas validasi. DESIGN.md serta UI belum dibuat karena arah visual belum disetujui.
 
-## Validasi dokumen
+## Validasi dan batasan
 
-Periksa whitespace dan tautan lokal, ID aturan/contoh serta referensinya, hitungan contoh, metadata commit dan penamaan. Pemeriksaan aritmetika contoh tidak membuktikan aplikasi, locking atau rollback sudah berjalan. Pengujian aplikasi dalam matriks validasi masih belum dijalankan.
+Pemeriksaan dokumen meliputi tautan, whitespace, diagram source, JSON contoh, referensi requirement, label/atribusi dan metadata commit. Pengujian aplikasi, locking, rollback, isolasi DB, restore, printer dan deployment belum dijalankan karena belum ada implementasi. Schema/OpenAPI lengkap untuk fitur berikutnya harus dilengkapi sebelum implementasi.
 
-## Batasan dan review
-
-Belum ada source, database, dependency, build/test aplikasi, deployment, uji printer atau restore. Palet/tipografi, lisensi, runtime dan konfigurasi outlet belum dikunci. Review utama: IDR/pembulatan/basis pajak, konsumsi saat persiapan, kapan meja lepas, refund saat persiapan, izin diskon, atribusi kas shift, dan masa retur. Semuanya tetap usulan.
+O-001–05, presisi kuantitas, konfigurasi tarif/outlet, runtime, palet/tipografi dan lisensi tetap terbuka. Merge rancangan bukan bukti kesiapan produksi atau persetujuan otomatis pilihan bisnis.
 
 ## Langkah berikutnya
 
-Review O-001 sampai O-005, catat keputusan, lalu kerjakan ARCH-01 sampai ARCH-04 pada backlog. Branch baru mengikuti dependensi yang sudah direview. Status push dan hash akhir diperiksa melalui Git, bukan disimpulkan dari URL repository.
+Kerjakan UX-PLAN-01 sampai UX-PLAN-04 pada backlog, dimulai dengan arah visual pengguna. Selesaikan keputusan produk dan versi dependency sebelum schema/scaffold terkait. Riwayat merge dan kecocokan remote diperiksa melalui Git.
