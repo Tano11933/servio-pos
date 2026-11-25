@@ -4,7 +4,7 @@ POS untuk operasional kafe dan restoran, dikembangkan bertahap menuju pilot satu
 
 ## Status saat ini
 
-Fondasi dokumentasi, PRD, matriks akses, dan rancangan validasi tersedia. Usulan aturan operasional, hitungan uang, shift, serta retur telah disusun untuk review. Berikutnya adalah review keputusan bisnis lalu arsitektur dan model data. Aplikasi, API, database, dan pipeline belum diimplementasikan; belum ada perintah untuk menjalankan aplikasi.
+Fondasi, PRD, aturan bisnis, rancangan arsitektur, ERD, ADR transaksi, kontrak REST awal, dan strategi pengujian tersedia. Pilihan bisnis yang masih berstatus usulan belum dikunci. Berikutnya adalah arah desain dan UX, lalu scaffold sesuai dependensi. Aplikasi, API, database, dan pipeline belum diimplementasikan; belum ada perintah untuk menjalankan aplikasi.
 
 Repository: [Tano11933/servio-pos](https://github.com/Tano11933/servio-pos). Branch utama: `main`. Identitas visual dan lisensi distribusi belum ditentukan.
 
@@ -59,6 +59,10 @@ Target commit adalah 3–4 perubahan bermakna per hari. Jumlah tersebut tidak di
 - [Usulan aturan bisnis](docs/product/business-rules.md)
 - [Aturan uang, shift, dan retur](docs/product/settlement-rules.md)
 - [Contoh penerimaan aturan](docs/product/business-examples.md)
+- [Arsitektur sistem](docs/architecture/overview.md)
+- [Model data dan ERD](docs/architecture/data-model.md)
+- [Kontrak REST awal](docs/api/README.md)
+- [Strategi pengujian](docs/engineering/testing.md)
 - [Roadmap milestone](docs/roadmap.md)
 - [Daftar keputusan dan hal yang perlu dikunci](docs/decisions.md)
 - [Backlog sesi berikutnya](docs/backlog.md)

@@ -32,6 +32,10 @@ Catatan kerja: gunakan penamaan yang mengalir berdasarkan fitur/milestone pada d
 
 ## Keputusan terbuka
 
+Rancangan teknis tersedia pada [overview](architecture/overview.md), [model data](architecture/data-model.md), [ADR struktur](architecture/adr/001-modular-monolith.md), [ADR transaksi](architecture/adr/002-transactions-and-recovery.md), dan [REST awal](api/README.md). Baseline teknis memilih scope FK komposit, sesi server-side, polling dapur, idempotency persisten dan transaksi dengan lock eksplisit. Ini bukan klaim implementasi atau persetujuan otomatis O-001–05.
+
+Usulan presisi bahan `numeric(20,6)` dan rate persen `numeric(9,6)` perlu dikunci sebelum schema; uang API berupa string digit agar tidak kehilangan presisi. Runtime dan provider belum dipilih. O-006 sudah memiliki rancangan ERD tetapi belum diuji migrasi/FK/konkurensi.
+
 Usulan rinci tersedia pada [aturan bisnis](product/business-rules.md) (BR-01–06), [uang/shift/retur](product/settlement-rules.md) (BR-07–10), dan [contoh penerimaan](product/business-examples.md). O-002 sampai O-005 tetap terbuka sampai direview; dokumentasi bukan persetujuan otomatis.
 
 Poin utama: usulan IDR dan half-up satu rupiah; konsumsi bahan saat PREPARING; meja dilepas setelah pelunasan historis dan item final; refund item PREPARING ditunda; diskon hanya owner/manager; refund tercatat pada shift pelaku yang aktif. Tarif dan data outlet belum ditetapkan.
