@@ -20,9 +20,13 @@ Dokumentasi ditulis dalam Bahasa Indonesia. Identifier kode, nama endpoint, dan 
 | [Kontrak REST](api/README.md) | Operasi prioritas dan format pertukaran | Kontrak awal, bukan endpoint aktif |
 | [Strategi pengujian](engineering/testing.md) | Lapisan bukti dan skenario kritis | Rancangan |
 | [Review arsitektur](architecture/review.md) | Temuan, koreksi, dan batas validasi | Review dokumentasi |
+| [Arah desain](../DESIGN.md) | Arah pemilik, token, dan alasan visual | Baseline spesifikasi; belum UI |
+| [UX dan wireframe](design/ux-spec.md) | Navigasi dan alur operasional | Rancangan |
+| [State interaksi](design/interaction-states.md) | Error, konflik, draft, pemulihan | Rancangan |
+| [Review desain](design/review.md) | Temuan, kontras token, batas validasi | Review dokumen |
 | [Roadmap](roadmap.md) | Milestone dan checkpoint | Baseline |
 | [Daftar keputusan](decisions.md) | Keputusan terkunci, default, dan hal terbuka | Tersedia |
-| [Backlog](backlog.md) | Tugas berikutnya dengan kriteria selesai | Keputusan desain/UX dan scaffold |
+| [Backlog](backlog.md) | Tugas berikutnya dengan kriteria selesai | Keputusan prasyarat dan scaffold |
 | [Progres](progress.md) | Hasil, batasan, dan langkah berikutnya | Tersedia |
 | [Panduan pengembangan](../AGENTS.md) | Aturan implementasi dan validasi | Tersedia |
 | [Panduan kontribusi](../CONTRIBUTING.md) | Branch, commit, review, dan handoff | Tersedia |
@@ -36,8 +40,6 @@ Daftar ini adalah rencana, bukan tautan ke file yang sudah tersedia. Hindari mem
 
 | Target | Dokumen / lokasi terencana | Isi minimum |
 | --- | --- | --- |
-| UX | `design/ux-spec.md` | Alur, wireframe, keyboard, responsivitas, empty/loading/error/offline states |
-| Arah visual | `../DESIGN.md` pada root repository | Arah pengguna, persetujuan, dan alasan keputusan utama |
 | Sebelum fitur terkait | Lengkapi JSON Schema/OpenAPI dari kontrak REST awal | Payload/response lengkap, batas field, izin, error, idempotency, konflik |
 | Staging | Runbook: `operations/runbook.md` | Environment, migrasi, deployment, monitoring, insiden |
 | Kesiapan pilot | Backup/restore: `operations/backup-restore.md` | RPO/RTO, retensi, akses, langkah restore, bukti latihan |

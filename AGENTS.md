@@ -45,7 +45,7 @@ Repository saat ini berisi dokumentasi, belum ada source aplikasi, package manif
 
 ## UX dan struktur aplikasi
 
-- Kerjakan arah visual bersama pengguna sebelum UI final; belum ada palet atau tipografi yang disetujui.
+- Baca [DESIGN.md](DESIGN.md), [spesifikasi UX](docs/design/ux-spec.md), dan [state interaksi](docs/design/interaction-states.md) sebelum UI. Arah pemilik: terang/hangat bernuansa kafe, aksen hijau, tablet Android landscape. Token turunan menjadi baseline yang perlu diverifikasi pada UI nyata.
 - UI kasir harus mendukung keyboard, fokus terlihat, perangkat sentuh, serta keadaan kosong/loading/error/koneksi terputus.
 - Saat source tersedia, jaga batas modul bisnis; jangan menaruh kalkulasi uang dan otorisasi hanya di frontend.
 - Runtime, versi dependency, struktur workspace, dan detail sesi diputuskan saat kontrak arsitektur/scaffold dibuat. Jangan menambahkan file setup spekulatif yang tidak dapat diuji.

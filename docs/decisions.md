@@ -17,6 +17,7 @@ Status dibedakan antara keputusan pengguna yang sudah disepakati, default kerja 
 | D-009 | Branch per perubahan/fitur kecil dan 3–4 commit bermakna/hari | Merge commit mempertahankan riwayat; tidak membuat aktivitas semu |
 | D-010 | Nama Servio POS, repository public `Tano11933/servio-pos` | Remote: `https://github.com/Tano11933/servio-pos.git` |
 | D-011 | Penamaan berdasarkan fitur dan milestone | Tidak memakai label hari pada dokumen, branch, atau commit; identitas commit memakai pemilik repository tanpa atribusi tambahan |
+| D-012 | Arah visual terang dan hangat, nuansa kafe, aksen hijau; prioritas tablet Android landscape | Jawaban pemilik; pemeriksaan desain selama penyusunan. [DESIGN.md](../DESIGN.md) merinci token turunan untuk implementasi/review |
 
 Catatan kerja: gunakan penamaan yang mengalir berdasarkan fitur/milestone pada dokumen, branch, dan commit. Metadata commit tetap memakai identitas pemilik tanpa atribusi tambahan. Aturan ini berlaku untuk sesi lanjutan.
 
@@ -48,7 +49,7 @@ Poin utama: usulan IDR dan half-up satu rupiah; konsumsi bahan saat PREPARING; m
 | O-004 | Status pesanan, pembayaran, dan dapur | ERD/API terkait | State transition serta aturan perubahan bersamaan |
 | O-005 | Retur makanan/bahan | Model retur | Bedakan refund dan disposisi; jangan otomatis membalik resep |
 | O-006 | ERD dan constraint tenant/outlet | Migrasi awal | Relasi, constraint, dan query tidak melintasi tenant |
-| O-007 | Palet, tipografi, dan arah visual | UI final | Design brief pemilik |
+| O-007 | Verifikasi token, tipografi, dan reflow aktual | UI final | Arah pemilik sudah disepakati pada D-012; baseline token/system font dan wireframe tersedia, belum diverifikasi pada UI nyata |
 | O-008 | Runtime, package manager, dependency | Scaffold | Dukungan resmi, versi, lockfile, dan ADR |
 | O-009 | Model thermal, koneksi, jalur cetak | Pembelian dan integrasi perangkat | Kajian awal pada fondasi; uji fisik sebelum kesiapan pilot |
 | O-010 | Lisensi distribusi | Pemberian hak distribusi | Keputusan pemilik |

@@ -6,7 +6,7 @@ Status tugas: `berikutnya`, `belum dimulai`, `berjalan`, `selesai`, atau `terham
 
 ## Fondasi produk dan pengembangan
 
-Status: berjalan. Kebutuhan dan aturan bisnis sudah diintegrasikan; rancangan arsitektur/model data, ADR, kontrak REST awal, serta strategi pengujian tersedia. Izin dan pilihan operasional tetap terbuka; desain/UX dan scaffold menyusul. Milestone belum selesai karena aplikasi belum dapat dijalankan.
+Status: berjalan. Kebutuhan, aturan bisnis, arsitektur/model data, ADR, REST awal, strategi pengujian, dan baseline desain/UX tersedia. Arah pemilik sudah dicatat; izin serta pilihan operasional tetap terbuka. Scaffold menyusul; milestone belum selesai karena aplikasi belum dapat dijalankan.
 
 - Git, README, workflow branch, panduan pengembangan, dan catatan progres.
 - PRD, matriks hak akses, dan kriteria penerimaan pilot.

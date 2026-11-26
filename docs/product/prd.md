@@ -63,7 +63,7 @@ Kebutuhan berikut berprioritas wajib untuk pilot. Implementasi mengikuti depende
 
 Usulan perilaku rinci ada pada [aturan operasional](business-rules.md) dan [aturan uang/shift/retur](settlement-rules.md), dengan [contoh penerimaan](business-examples.md). Dokumen tersebut belum mengunci keputusan pemilik; termasuk batas pembatalan baris, hak diskon, dan refund saat persiapan yang perlu direview sebelum implementasi.
 
-Nama produk adalah Servio POS; warna/tipografi belum ditentukan. Arah visual direncanakan di `DESIGN.md` pada root; spesifikasi interaksi dan wireframe di `docs/design/ux-spec.md`. Dokumen visual belum tersedia.
+Nama produk adalah Servio POS. Arah visual pemilik dan token turunan tersedia pada [DESIGN.md](../../DESIGN.md); [UX/wireframe](../design/ux-spec.md) serta [state interaksi](../design/interaction-states.md) merinci perilaku. Belum ada UI berjalan; detail layout dan tipografi aktual tetap perlu validasi implementasi.
 
 ## Syarat penerimaan pilot
 
