@@ -4,9 +4,9 @@ POS untuk operasional kafe dan restoran, dikembangkan bertahap menuju pilot satu
 
 ## Status saat ini
 
-Fondasi, PRD, aturan bisnis, rancangan arsitektur, ERD, ADR transaksi, kontrak REST awal, dan strategi pengujian tersedia. Pilihan bisnis yang masih berstatus usulan belum dikunci. Berikutnya adalah arah desain dan UX, lalu scaffold sesuai dependensi. Aplikasi, API, database, dan pipeline belum diimplementasikan; belum ada perintah untuk menjalankan aplikasi.
+Fondasi, PRD, aturan bisnis, arsitektur, ERD, ADR, kontrak REST awal, strategi pengujian, serta baseline desain/UX tersedia. Arah visual terang dan hangat dengan aksen hijau mengutamakan tablet Android landscape. Berikutnya adalah keputusan prasyarat dan scaffold. Aplikasi, API, database, dan pipeline belum diimplementasikan; belum ada perintah untuk menjalankan aplikasi.
 
-Repository: [Tano11933/servio-pos](https://github.com/Tano11933/servio-pos). Branch utama: `main`. Identitas visual dan lisensi distribusi belum ditentukan.
+Repository: [Tano11933/servio-pos](https://github.com/Tano11933/servio-pos). Branch utama: `main`. Arah visual tercatat di DESIGN.md; logo dan lisensi distribusi belum ditentukan.
 
 ## Target pilot
 
@@ -63,6 +63,10 @@ Target commit adalah 3–4 perubahan bermakna per hari. Jumlah tersebut tidak di
 - [Model data dan ERD](docs/architecture/data-model.md)
 - [Kontrak REST awal](docs/api/README.md)
 - [Strategi pengujian](docs/engineering/testing.md)
+- [Arah desain](DESIGN.md)
+- [UX dan wireframe](docs/design/ux-spec.md)
+- [State interaksi dan pemulihan](docs/design/interaction-states.md)
+- [Review desain](docs/design/review.md)
 - [Roadmap milestone](docs/roadmap.md)
 - [Daftar keputusan dan hal yang perlu dikunci](docs/decisions.md)
 - [Backlog sesi berikutnya](docs/backlog.md)

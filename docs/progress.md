@@ -6,31 +6,31 @@
 | --- | --- |
 | Produk | Servio POS |
 | Milestone | Fondasi produk dan pengembangan |
-| Hasil terbaru | Arsitektur, ERD/kamus data, dua ADR, REST awal, strategi pengujian dan review dokumen |
-| Integrasi | Pemilik mengotorisasi review dan merge ke main setelah validasi; hash/status remote diverifikasi lewat Git |
-| Asal branch | docs/system-architecture |
-| Berikutnya | Design brief bersama pemilik dan spesifikasi UX |
+| Hasil terbaru | DESIGN.md, UX/wireframe, state interaksi dan review desain |
+| Persetujuan | Pemilik memilih terang/hangat bernuansa kafe, aksen hijau, tablet Android landscape dan pemeriksaan selama penyusunan |
+| Integrasi | Review dan merge setelah validasi diotorisasi pemilik; hasil remote diverifikasi lewat Git |
+| Asal branch | docs/product-design |
+| Berikutnya | Prasyarat environment/versi dan scaffold aplikasi |
 | Repository | [Tano11933/servio-pos](https://github.com/Tano11933/servio-pos) |
 
 ## Catatan kerja tetap
 
-Penamaan mengalir berdasarkan fitur/milestone, tanpa label hari pada dokumen, branch, atau commit. Metadata memakai identitas Git pemilik tanpa atribusi tambahan. Jangan membuat commit kosong untuk memenuhi jumlah.
+Penamaan mengalir berdasarkan fitur/milestone tanpa label hari. Metadata commit memakai identitas Git pemilik tanpa atribusi tambahan. Tidak membuat commit kosong untuk memenuhi jumlah.
 
 ## Hasil
 
-- PRD dan aturan bisnis sudah diintegrasikan pada main; pilihan yang ditandai usulan tetap terbuka.
-- [Overview](architecture/overview.md) menjelaskan container, ownership modul, sesi/CSRF, tenant dan alur kritis.
-- [ERD/kamus data](architecture/data-model.md) memetakan snapshot, unit refund, saldo/ledger, scope FK dan constraint.
-- ADR struktur serta transaksi menetapkan baseline sesi, polling, locking, replay dan pemulihan.
-- [REST awal](api/README.md) dan [strategi pengujian](engineering/testing.md) menyediakan antarmuka prioritas serta bukti yang diperlukan.
-- [Review](architecture/review.md) mencatat koreksi dan batas validasi. DESIGN.md serta UI belum dibuat karena arah visual belum disetujui.
+- Produk, aturan bisnis dan arsitektur tetap menjadi sumber kontrak; pilihan bisnis yang ditandai usulan belum dikunci.
+- [DESIGN.md](../DESIGN.md) mencatat arah pemilik, token turunan, alasan visual, system font, hirarki, reflow serta aksesibilitas.
+- [UX/wireframe](design/ux-spec.md) menjelaskan alur kasir, meja, dapur, pembayaran, koreksi, shift dan administrasi; kontrak endpoint yang belum lengkap ditandai.
+- [State interaksi](design/interaction-states.md) merinci error/conflict/timeout, pemulihan, cetak, logout serta PWA.
+- [Review desain](design/review.md) mencatat 11 pasangan warna yang lolos ambang numerik serta batas validasi.
 
 ## Validasi dan batasan
 
-Pemeriksaan dokumen meliputi tautan, whitespace, diagram source, JSON contoh, referensi requirement, label/atribusi dan metadata commit. Pengujian aplikasi, locking, rollback, isolasi DB, restore, printer dan deployment belum dijalankan karena belum ada implementasi. Schema/OpenAPI lengkap untuk fitur berikutnya harus dilengkapi sebelum implementasi.
+Pemeriksaan dokumen: tautan lokal, whitespace, fence wireframe, referensi requirement/state, penamaan, dan metadata commit. Kontras dihitung dari luminance sRGB; UI aktual, zoom, keyboard, pembaca layar, Android sentuh dan reflow belum diuji karena belum ada source aplikasi.
 
-O-001–05, presisi kuantitas, konfigurasi tarif/outlet, runtime, palet/tipografi dan lisensi tetap terbuka. Merge rancangan bukan bukti kesiapan produksi atau persetujuan otomatis pilihan bisnis.
+Belum ada dependency, database, build/test aplikasi, deployment, uji printer atau restore. Token turunan masih memerlukan verifikasi di UI nyata. O-001–05, presisi, konfigurasi outlet, runtime dan lisensi tetap terbuka. Merge spesifikasi tidak membuktikan kesiapan pilot.
 
 ## Langkah berikutnya
 
-Kerjakan UX-PLAN-01 sampai UX-PLAN-04 pada backlog, dimulai dengan arah visual pengguna. Selesaikan keputusan produk dan versi dependency sebelum schema/scaffold terkait. Riwayat merge dan kecocokan remote diperiksa melalui Git.
+Kerjakan SETUP-01 sampai SETUP-04 pada backlog, selesaikan keputusan prasyarat sebelum schema bisnis terkait, lalu jalankan kerangka aplikasi. Riwayat merge dan kecocokan remote diperiksa melalui Git.
